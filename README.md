@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/v-xiaooulv/WF/_apis/build/status/lvxiaoou234.pipelines-java?branchName=main)](https://dev.azure.com/v-xiaooulv/WF/_build/latest?definitionId=1&branchName=main)![image](https://user-images.githubusercontent.com/110451529/225527548-52917f40-9ac6-41e2-99b9-e9e755c4ac65.png)
 
 # Contributing
 
