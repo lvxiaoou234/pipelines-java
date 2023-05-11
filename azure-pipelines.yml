@@ -36,6 +36,8 @@ steps:
     summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml"
     reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/jacoco"
     failIfCoverageEmpty: true
+
+
 - task: Bash@3
   inputs:
     targetType: 'inline'
@@ -43,5 +45,14 @@ steps:
       # Write your commands here
           
       echo 'Hello world'
+
+schedules:
+- cron: '0 0 * * *' # cron syntax defining a schedule 
+  displayName: Daily mudnight build # friendly name given to a specific schedule
+  branches:
+    include: 
+    - main # which branches the schedule applies to
+    exclude: [ string ] # which branches to exclude from the schedule
+  always: false # whether to always run the pipeline or only if there have been source code changes since the last successful scheduled run. The default is false.
 
 
